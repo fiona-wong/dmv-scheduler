@@ -40,14 +40,6 @@ with Browser("chrome") as browser:
     # continue to appointment page
     browser.find_by_value("Continue").click()
 
-    #if you don't have a prior appt it goes here to confirm
-    if browser.is_element_present_by_id('ApptForm', 20):
-        browser.choose("notificationMethod", "EMAIL")
-        browser.find_by_name("notify_email").fill(email)
-        browser.find_by_name("notify_email_confirm").fill(email)
-        browser.find_by_value("Continue").click()
-
-    #
     if browser.is_element_present_by_id('formId_1', 20):
         appt_xpath = '//div[@class="r-table col-xs-12"]'
         appt_table = browser.find_by_xpath(appt_xpath).first.text
@@ -67,10 +59,18 @@ with Browser("chrome") as browser:
                     browser.find_by_value("Continue").click()
                     current_appt_time = appt_time_str
                     print("Successfully booked your appointment at {}".format(appt_time_str))
+                    quit()
                 # if you already have a prior appt it goes here to confirm
                 if browser.is_element_present_by_value("Confirm New Appointment", wait_time=None):
                     current_appt_time = appt_time_str
                     browser.find_by_value("Confirm New Appointment").click()
-                    print("Successfully booked your new appointment at {}".format(appt_time_str))
+                    if browser.is_element_present_by_value("Continue", 20):
+                        browser.choose("notificationMethod", "EMAIL")
+                        browser.find_by_name("notify_email").fill(email)
+                        browser.find_by_name("notify_email_confirm").fill(email)
+                        browser.find_by_value("Continue").click()
+                        current_appt_time = appt_time_str
+                        print("Successfully booked your new appointment at {}".format(appt_time_str))
+                        quit()
         else:
             print("Appointment time is later than the one you currently have :(")
