@@ -11,5 +11,7 @@ pip install -r requirements.txt
 Set up cron tab to run script every 15 min until the day of your appointment
 
 In terminal:
-```crontab -e
-*/15 * * * *  path-to:schedule_appt.py```
+```
+crontab -e
+*/15 * * * *  <path-to:schedule_appt.py>
+```
