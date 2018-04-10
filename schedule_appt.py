@@ -11,14 +11,14 @@ with Browser("chrome") as browser:
     default_office = "503"
     task_numbers = ["1", "2", "3"]
     reasons_for_visit = ["taskRID", "taskCID", "taskVR"]
-    first_name = "First"
-    last_name = "Last"
-    tel_area = "888"
-    tel_prefix = "123"
-    tel_suffix = "4567"
-    email="example@gmail.com"
+    first_name = "Mike"
+    last_name = "Jones"
+    tel_area = "281"
+    tel_prefix = "330"
+    tel_suffix = "8004"
+    email = "mikejones@gmail.com"
     # if you don't have a current appt time, just make one really far out or the latest possible
-    current_appt_time = 'Workday, Month DD, YYYY at HH:MM PM'
+    current_appt_time = 'Monday, June 4, 2018 at 5:00 PM'
 
     # select dmv office
     dmv_office = browser.find_by_id("officeId").first
@@ -50,18 +50,21 @@ with Browser("chrome") as browser:
         if is_new_appttime_earlier:
             continue_xpath = "//a[contains(text(), 'Continue')]"
             browser.find_by_xpath(continue_xpath).click()
-            if browser.is_element_present_by_id('ApptForm', 20):
+            if browser.is_element_present_by_name('ApptForm', 20):
                 # if you don't have a prior appt it goes here to confirm
-                if browser.is_element_present_by_value("Continue", wait_time=None):
-                    browser.choose("notificationMethod", "EMAIL")
-                    browser.find_by_name("notify_email").fill(email)
-                    browser.find_by_name("notify_email_confirm").fill(email)
-                    browser.find_by_value("Continue").click()
-                    current_appt_time = appt_time_str
-                    print("Successfully booked your appointment at {}".format(appt_time_str))
-                    quit()
+                browser.choose("notificationMethod", "SMS")
+                browser.find_by_name("notify_smsTelArea").fill(tel_area)
+                browser.find_by_name("notify_smsTelPrefix").fill(tel_prefix)
+                browser.find_by_name("notify_smsTelSuffix").fill(tel_suffix)
+                browser.find_by_name("notify_smsTelArea_confirm").fill(tel_area)
+                browser.find_by_name("notify_smsTelPrefix_confirm").fill(tel_prefix)
+                browser.find_by_name("notify_smsTelSuffix_confirm").fill(tel_suffix)
+                browser.find_by_value("Continue").click()
+                current_appt_time = appt_time_str
+                print("Successfully booked your appointment at {}".format(appt_time_str))
+                quit()
                 # if you already have a prior appt it goes here to confirm
-                if browser.is_element_present_by_value("Confirm New Appointment", wait_time=None):
+                if browser.is_element_present_by_value("Confirm New Appointment", 20):
                     current_appt_time = appt_time_str
                     browser.find_by_value("Confirm New Appointment").click()
                     if browser.is_element_present_by_value("Continue", 20):
@@ -74,3 +77,4 @@ with Browser("chrome") as browser:
                         quit()
         else:
             print("Appointment time is later than the one you currently have :(")
+            quit()
