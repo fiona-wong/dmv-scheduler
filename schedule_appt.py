@@ -8,16 +8,17 @@ with Browser("chrome") as browser:
     browser.cookies.delete()
 
     # constants
+    # list of dmv offices are found in dmvlist.txt
     default_office = "503"
     task_numbers = ["1", "2", "3"]
     reasons_for_visit = ["taskRID", "taskCID", "taskVR"]
-    first_name = "Fiona"
-    last_name = "Wong"
-    tel_area = "650"
-    tel_prefix = "773"
-    tel_suffix = "7092"
-    email = "feeonawong@gmail.com"
-    # if you don't have a current appt time, just make one really far out or the latest possible
+    first_name = "Mike"
+    last_name = "Jones"
+    tel_area = "281"
+    tel_prefix = "330"
+    tel_suffix = "8004"
+    email = "mikejones@gmail.com"
+    # Make sure you have a future date set in the appt.txt file
     current_appt_time = None
     with open('appt.txt', 'r') as myfile:
         data = myfile.read().replace('\n', '')

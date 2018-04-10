@@ -1,0 +1,173 @@
+"537" is the code for ALTURAS
+"587" is the code for ARLETA
+"661" is the code for ARVIN
+"570" is the code for AUBURN
+"529" is the code for BAKERSFIELD
+"679" is the code for BAKERSFIELD SW
+"641" is the code for BANNING
+"582" is the code for BARSTOW
+"576" is the code for BELL GARDENS
+"606" is the code for BELLFLOWER
+"585" is the code for BISHOP
+"528" is the code for BLYTHE
+"597" is the code for BRAWLEY
+"550" is the code for CAPITOLA
+"625" is the code for CARMICHAEL
+"520" is the code for CHICO
+"613" is the code for CHULA VISTA
+"580" is the code for CLOVIS
+"603" is the code for COALINGA
+"564" is the code for COLUSA
+"581" is the code for COMPTON
+"523" is the code for CONCORD
+"534" is the code for CORTE MADERA
+"628" is the code for COSTA MESA
+"524" is the code for CRESCENT CITY
+"514" is the code for CULVER CITY
+"599" is the code for DALY CITY
+"598" is the code for DAVIS
+"615" is the code for DELANO
+"669" is the code for EL CAJON
+"527" is the code for EL CENTRO
+"556" is the code for EL CERRITO
+"685" is the code for EL MONTE
+"526" is the code for EUREKA
+"621" is the code for FAIRFIELD
+"643" is the code for FALL RIVER MILLS
+"655" is the code for FOLSOM
+"657" is the code for FONTANA
+"590" is the code for FORT BRAGG
+"644" is the code for FREMONT
+"505" is the code for FRESNO
+"646" is the code for FRESNO NORTH
+"607" is the code for FULLERTON
+"627" is the code for GARBERVILLE
+"498" is the code for GARDENA CDTC
+"623" is the code for GILROY
+"510" is the code for GLENDALE
+"670" is the code for GOLETA
+"693" is the code for GRANADA HILLS DLPC
+"541" is the code for GRASS VALLEY
+"565" is the code for HANFORD
+"609" is the code for HAWTHORNE
+"579" is the code for HAYWARD
+"635" is the code for HEMET
+"546" is the code for HOLLISTER
+"508" is the code for HOLLYWOOD
+"652" is the code for HOLLYWOOD WEST
+"578" is the code for INDIO
+"610" is the code for INGLEWOOD
+"521" is the code for JACKSON
+"647" is the code for KING CITY
+"605" is the code for LAGUNA HILLS
+"687" is the code for LAKE ISABELLA
+"530" is the code for LAKEPORT
+"595" is the code for LANCASTER
+"617" is the code for LINCOLN PARK
+"622" is the code for LODI
+"692" is the code for LOMPOC
+"507" is the code for LONG BEACH
+"502" is the code for LOS ANGELES
+"650" is the code for LOS BANOS
+"640" is the code for LOS GATOS
+"533" is the code for MADERA
+"658" is the code for MANTECA
+"566" is the code for MARIPOSA
+"536" is the code for MERCED
+"557" is the code for MODESTO
+"511" is the code for MONTEBELLO
+"639" is the code for MOUNT SHASTA
+"540" is the code for NAPA
+"584" is the code for NEEDLES
+"662" is the code for NEWHALL
+"586" is the code for NORCO
+"686" is the code for NOVATO
+"504" is the code for OAKLAND CLAREMONT
+"604" is the code for OAKLAND COLISEUM
+"596" is the code for OCEANSIDE
+"522" is the code for OROVILLE
+"636" is the code for OXNARD
+"683" is the code for PALM DESERT
+"659" is the code for PALM SPRINGS
+"601" is the code for PARADISE
+"509" is the code for PASADENA
+"574" is the code for PASO ROBLES
+"634" is the code for PETALUMA
+"592" is the code for PITTSBURG
+"525" is the code for PLACERVILLE
+"631" is the code for PLEASANTON
+"532" is the code for POMONA
+"573" is the code for PORTERVILLE
+"676" is the code for POWAY
+"544" is the code for QUINCY
+"612" is the code for RANCHO CUCAMONGA
+"558" is the code for RED BLUFF
+"551" is the code for REDDING
+"626" is the code for REDLANDS
+"548" is the code for REDWOOD CITY
+"633" is the code for REEDLEY
+"577" is the code for RIDGECREST
+"545" is the code for RIVERSIDE
+"656" is the code for RIVERSIDE EAST
+"673" is the code for ROCKLIN
+"543" is the code for ROSEVILLE
+"501" is the code for SACRAMENTO
+"602" is the code for SACRAMENTO SOUTH
+"539" is the code for SALINAS
+"568" is the code for SAN ANDREAS
+"512" is the code for SAN BERNARDINO
+"648" is the code for SAN CLEMENTE
+"506" is the code for SAN DIEGO
+"519" is the code for SAN DIEGO CLAIREMONT
+"503" is the code for SAN FRANCISCO
+"516" is the code for SAN JOSE
+"645" is the code for SAN JOSE DLPC
+"547" is the code for SAN LUIS OBISPO
+"689" is the code for SAN MARCOS RANCHEROS
+"593" is the code for SAN MATEO
+"619" is the code for SAN PEDRO
+"677" is the code for SAN YSIDRO
+"542" is the code for SANTA ANA
+"549" is the code for SANTA BARBARA
+"632" is the code for SANTA CLARA
+"563" is the code for SANTA MARIA
+"616" is the code for SANTA MONICA
+"630" is the code for SANTA PAULA
+"555" is the code for SANTA ROSA
+"668" is the code for SANTA TERESA
+"567" is the code for SEASIDE
+"660" is the code for SHAFTER
+"680" is the code for SIMI VALLEY
+"569" is the code for SONORA
+"538" is the code for SOUTH LAKE TAHOE
+"698" is the code for STANTON DLPC
+"517" is the code for STOCKTON
+"531" is the code for SUSANVILLE
+"575" is the code for TAFT
+"672" is the code for TEMECULA
+"663" is the code for THOUSAND OAKS
+"608" is the code for TORRANCE
+"642" is the code for TRACY
+"513" is the code for TRUCKEE
+"594" is the code for TULARE
+"553" is the code for TULELAKE
+"649" is the code for TURLOCK
+"638" is the code for TWENTYNINE PALMS
+"535" is the code for UKIAH
+"588" is the code for VACAVILLE
+"554" is the code for VALLEJO
+"515" is the code for VAN NUYS
+"560" is the code for VENTURA
+"629" is the code for VICTORVILLE
+"559" is the code for VISALIA
+"624" is the code for WALNUT CREEK
+"583" is the code for WATSONVILLE
+"572" is the code for WEAVERVILLE
+"618" is the code for WEST COVINA
+"611" is the code for WESTMINSTER
+"591" is the code for WHITTIER
+"571" is the code for WILLOWS
+"637" is the code for WINNETKA
+"561" is the code for WOODLAND
+"552" is the code for YREKA
+"562" is the code for YUBA CITY
