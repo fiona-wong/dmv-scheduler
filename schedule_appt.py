@@ -11,14 +11,18 @@ with Browser("chrome") as browser:
     default_office = "503"
     task_numbers = ["1", "2", "3"]
     reasons_for_visit = ["taskRID", "taskCID", "taskVR"]
-    first_name = "Mike"
-    last_name = "Jones"
-    tel_area = "281"
-    tel_prefix = "330"
-    tel_suffix = "8004"
-    email = "mikejones@gmail.com"
+    first_name = "Fiona"
+    last_name = "Wong"
+    tel_area = "650"
+    tel_prefix = "773"
+    tel_suffix = "7092"
+    email = "feeonawong@gmail.com"
     # if you don't have a current appt time, just make one really far out or the latest possible
-    current_appt_time = 'Monday, June 4, 2018 at 5:00 PM'
+    current_appt_time = None
+    with open('appt.txt', 'r') as myfile:
+        data = myfile.read().replace('\n', '')
+        current_appt_time = data
+        print(data)
 
     # select dmv office
     dmv_office = browser.find_by_id("officeId").first
@@ -60,19 +64,22 @@ with Browser("chrome") as browser:
                 browser.find_by_name("notify_smsTelPrefix_confirm").fill(tel_prefix)
                 browser.find_by_name("notify_smsTelSuffix_confirm").fill(tel_suffix)
                 browser.find_by_value("Continue").click()
-                current_appt_time = appt_time_str
+                file = open('appt.txt', 'w')
+                file.write(appt_time_str)
+                file.close()
                 print("Successfully booked your appointment at {}".format(appt_time_str))
                 quit()
                 # if you already have a prior appt it goes here to confirm
                 if browser.is_element_present_by_value("Confirm New Appointment", 20):
-                    current_appt_time = appt_time_str
                     browser.find_by_value("Confirm New Appointment").click()
                     if browser.is_element_present_by_value("Continue", 20):
                         browser.choose("notificationMethod", "EMAIL")
                         browser.find_by_name("notify_email").fill(email)
                         browser.find_by_name("notify_email_confirm").fill(email)
                         browser.find_by_value("Continue").click()
-                        current_appt_time = appt_time_str
+                        file = open('appt.txt', 'w')
+                        file.write(appt_time_str)
+                        file.close()
                         print("Successfully booked your new appointment at {}".format(appt_time_str))
                         quit()
         else:

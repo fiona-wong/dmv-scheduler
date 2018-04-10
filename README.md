@@ -15,3 +15,7 @@ In terminal:
 crontab -e
 */15 * * * *  <path-to:schedule_appt.py>
 ```
+Or to run manually just:
+```
+python schedule_appt.py
+```
