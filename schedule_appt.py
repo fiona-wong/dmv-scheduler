@@ -1,26 +1,31 @@
+import os.path
 from splinter import Browser
 from datetime import datetime
 
-with Browser("chrome") as browser:
+executable_path = {'executable_path':'/usr/local/bin/chromedriver'}
+
+with Browser("chrome", **executable_path) as browser:
     # visit url
     url = "https://www.dmv.ca.gov/wasapp/foa/clear.do?goTo=officeVisit&localeName=en"
     browser.visit(url)
     browser.cookies.delete()
+    apptfiledir = os.path.abspath(os.path.dirname(__file__)) #This would give the absolute path to the directory in which your script exists.
+    apptfile = os.path.join(apptfiledir,'appt.txt')
 
     # constants
     # list of dmv offices are found in dmvlist.txt
     default_office = "503"
     task_numbers = ["1", "2", "3"]
     reasons_for_visit = ["taskRID", "taskCID", "taskVR"]
-    first_name = "Mike"
-    last_name = "Jones"
-    tel_area = "281"
-    tel_prefix = "330"
-    tel_suffix = "8004"
-    email = "mikejones@gmail.com"
+    first_name = "First"
+    last_name = "Last"
+    tel_area = "XXX"
+    tel_prefix = "XXX"
+    tel_suffix = "XXXX"
+    email = "email@gmail.com"
     # Make sure you have a future date set in the appt.txt file
     current_appt_time = None
-    with open('appt.txt', 'r') as myfile:
+    with open(apptfile, 'r') as myfile:
         data = myfile.read().replace('\n', '')
         current_appt_time = data
         print(data)
@@ -65,11 +70,13 @@ with Browser("chrome") as browser:
                 browser.find_by_name("notify_smsTelPrefix_confirm").fill(tel_prefix)
                 browser.find_by_name("notify_smsTelSuffix_confirm").fill(tel_suffix)
                 browser.find_by_value("Continue").click()
-                file = open('appt.txt', 'w')
-                file.write(appt_time_str)
-                file.close()
-                print("Successfully booked your appointment at {}".format(appt_time_str))
-                quit()
+                if browser.is_element_present_by_value("Confirm", 20):
+                    browser.find_by_value("Confirm").click()
+                    file = open(apptfiledir, 'w')
+                    file.write(appt_time_str)
+                    file.close()
+                    print("Successfully booked your appointment at {}".format(appt_time_str))
+                    quit()
                 # if you already have a prior appt it goes here to confirm
                 if browser.is_element_present_by_value("Confirm New Appointment", 20):
                     browser.find_by_value("Confirm New Appointment").click()
@@ -78,11 +85,13 @@ with Browser("chrome") as browser:
                         browser.find_by_name("notify_email").fill(email)
                         browser.find_by_name("notify_email_confirm").fill(email)
                         browser.find_by_value("Continue").click()
-                        file = open('appt.txt', 'w')
-                        file.write(appt_time_str)
-                        file.close()
-                        print("Successfully booked your new appointment at {}".format(appt_time_str))
-                        quit()
+                        if browser.is_element_present_by_value("Confirm", 20):
+                            browser.find_by_value("Confirm").click()
+                            file = open(apptfiledir, 'w')
+                            file.write(appt_time_str)
+                            file.close()
+                            print("Successfully booked your new appointment at {}".format(appt_time_str))
+                            quit()
         else:
             print("Appointment time is later than the one you currently have :(")
             quit()

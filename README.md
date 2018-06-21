@@ -20,7 +20,7 @@ Set up cron tab to run script every 15 min until the day of your appointment
 In terminal:
 ```
 crontab -e
-*/15 * * * *  <path-to:schedule_appt.py>
+*/15 * * * *  /usr/local/bin/python <path-to:schedule_appt.py>
 ```
 Or to run manually just:
 ```
